@@ -8,20 +8,18 @@ ci.yml file was used for the GitHub workflow
 dorny/test-reporter@v1 was used to generate reports after each CI run
 
 
-For testing requests and responses DevTools type property was used 
-
-  DevTools devTools;
+## For testing requests and responses DevTools type property was used 
 
 setUpDevTool(WebDriver driver)  method was created in the class CaptureNetworkTraffic  to capture the traffic:
 
 
-public CaptureNetworkTraffic setUpDevTool(WebDriver driver) {
-     devTools = ((ChromeDriver) driver).getDevTools();
-     devTools.createSession();
-     devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+    public CaptureNetworkTraffic setUpDevTool(WebDriver driver) {
+        devTools = ((ChromeDriver) driver).getDevTools();
+        devTools.createSession();
+        devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
      
-     return this;
- } 
+        return this;
+    } 
  
 org.openqa.selenium.devtools.v106.network.Network was used for traffic interception.
 
@@ -31,7 +29,7 @@ Rest Assured library and POJO Model was used for testing and validating REST API
 
 
 
-Setup the project:
+## Setup the project:
 
 1. Clon project from the GitHub repository: 
 https://github.com/olpolezhaeva/WetherProject.git
